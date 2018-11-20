@@ -1,23 +1,10 @@
 {
-  "plugins": [
-    ["@babel/plugin-transform-runtime",      {
-      "corejs": false,
-      "helpers": true,
-      "regenerator": true,
-      "useESModules": false
-    }],
-    "@babel/plugin-proposal-class-properties"
-  ],
   "env": {
     "production": {
-      "presets": ["@babel/preset-env", "@babel/preset-react"]
+      "presets": ["es2015", "react", "stage-1"]
     },
     "development": {
-      "presets": ["@babel/preset-env", "@babel/preset-react"],
-      "plugins": ["styled-jsx/babel"]
-    },
-    "test": {
-      "presets": ["@babel/preset-env", "@babel/preset-react"],
+      "presets": ["es2015", "react", "stage-1"],
       "plugins": ["styled-jsx/babel"]
     }
   }
