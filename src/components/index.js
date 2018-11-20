@@ -3,7 +3,8 @@ import React from 'react'
 
 import Identicon from './Identicon'
 import EthAddress from './EthAddress'
-import FeeSelector from './FeeSelector'
+import {FeeSelector} from './SendTx'
+import {FormCreateAccount, InputPassword } from './CreateAccount'
 
 const Button = ({children, onClick}) => (
   <button className='Button' onClick={onClick}>
@@ -28,5 +29,7 @@ export {
   Identicon,
   Button,
   EthAddress,
-  FeeSelector
+  FeeSelector,
+  FormCreateAccount,
+  InputPassword
 }
