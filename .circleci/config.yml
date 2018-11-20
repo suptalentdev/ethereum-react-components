@@ -1,8 +1,18 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.12
+      # specify the version you desire here
+      - image: circleci/node:7.10
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
@@ -13,6 +23,7 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run: yarn install
@@ -22,14 +33,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      - run: yarn run build-storybook
-      
-      - run: git config --global user.email "mist@ethereum.org"
-      - run: git config --global user.name "Mist-bot"
-      - run: git add docs
-      - run: git commit -m 'Updating github pages [ci skip]'
+      # run tests!
+      - run: yarn test
 
-      - run: yarn run unleash -p
-        
-        #- run: if [ $TRAVIS_BRANCH == 'circleci' ]; then yarn run unleash -p; fi
 
