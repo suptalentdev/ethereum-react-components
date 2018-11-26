@@ -5,7 +5,6 @@ import { FormCreateAccount, InputPassword } from './CreateAccount'
 import NodeInfo from './Network/NodeInfo'
 import { Spinner, Pulse } from './Widgets/LoadingAnimations'
 import Button from './Widgets/Button'
-import Checkbox from './Widgets/Checkbox'
 import LoadingButton from './Widgets/LoadingButton'
 import ValidatedField from './Widgets/ValidatedField'
 import ConverterForm from './Tools/EthConverterForm'
@@ -23,11 +22,10 @@ export {
   Spinner,
   Pulse,
   Button,
-  Checkbox,
   LoadingButton,
   ValidatedField,
   ConverterForm,
   NetworkChooser,
   RpcTester,
   TxHistory
-}
+};
