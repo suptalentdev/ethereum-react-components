@@ -10,7 +10,6 @@ import Button from './Widgets/Button'
 import Checkbox from './Widgets/Checkbox'
 import RadioButton from './Widgets/Form/RadioButton'
 import Input from './Widgets/Form/Input'
-import AddressInput from './Widgets/Form/AddressInput'
 import TextArea from './Widgets/Form/TextArea'
 import Select from './Widgets/Form/Select'
 import FileChooser from './Widgets/Form/FileChooser'
@@ -27,12 +26,9 @@ import TokenListForItem from './Wallet/TokenListForItem'
 import NavbarItem from './Wallet/NavbarItem'
 import NetworkStatus from './Wallet/NetworkStatus'
 
-import * as utils from '../lib/util'
-
 export {
   AccountList,
   AccountItem,
-  AddressInput,
   Button,
   Checkbox,
   RadioButton,
@@ -57,6 +53,5 @@ export {
   Spinner,
   TokenListForItem,
   TxHistory,
-  ValidatedField,
-  utils
+  ValidatedField
 }
