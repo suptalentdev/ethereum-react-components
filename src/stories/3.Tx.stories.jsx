@@ -28,7 +28,28 @@ const dummyTx = {
   network: 'main'
 }
 
-storiesOf('Tx/Fee Selector', module).add('default ', () => <FeeSelector />)
+storiesOf('Tx/Fee Selector', module)
+  .add('Main network, gas loading', () => (
+    <FeeSelector network="main" etherPriceUSD={200} gasLoading />
+  ))
+  .add('Main network, no gas', () => (
+    <FeeSelector network="main" etherPriceUSD={200} />
+  ))
+  .add('Main network', () => (
+    <FeeSelector
+      network="main"
+      etherPriceUSD={200}
+      gas={dummyTx.gas}
+      gasPrice={dummyTx.gasPrice}
+    />
+  ))
+  .add('Test network', () => (
+    <FeeSelector
+      network="rinkeby"
+      gas={dummyTx.gas}
+      gasPrice={dummyTx.gasPrice}
+    />
+  ))
 
 storiesOf('Tx/Submit Form', module)
   .add('default', () => <FormSubmitTx />)
@@ -40,7 +61,7 @@ storiesOf('Tx/Description', module)
     return <TxDescription {...dummyTx} />
   })
   .add('deploy contract', () => {
-    return <TxDescription {...dummyTx} isNewContract />
+    return <TxDescription {...dummyTx} isNewContract={true} />
   })
   .add('transfer tokens', () => {
     return (
@@ -130,12 +151,7 @@ storiesOf('Tx/Gas Notification', module).add('default', () => (
 ))
 
 storiesOf('Tx/SendTx', module).add('default', () => {
-  const nodes = {
-    network: 'main',
-    local: { blockNumber: 100 },
-    remote: { blockNumber: 100 }
-  }
-  return <SendTx network={nodes.network} newTx={dummyTx} />
+  return <SendTx network="main" newTx={dummyTx} />
 })
 
 storiesOf('Tx/History', module).add('default ', () => {
