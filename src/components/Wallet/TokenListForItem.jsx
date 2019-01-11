@@ -22,7 +22,7 @@ export default class TokenListForItem extends Component {
 
     const tokenIdenticons = tokenSubset.map(token => (
       <IdenticonWrapper key={token.address}>
-        <Identicon address={token.address} size="nano" />
+        <Identicon address={token.address} size="token" />
       </IdenticonWrapper>
     ))
 
