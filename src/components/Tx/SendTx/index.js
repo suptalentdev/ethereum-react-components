@@ -1,3 +1,3 @@
-import SendTxForm from './SendTxForm'
+import FormSendTx from './FormSendTx'
 
-export default SendTxForm
+export default FormSendTx
