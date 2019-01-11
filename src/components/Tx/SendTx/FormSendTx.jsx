@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import TxDescription from './TxDescription'
 import FeeSelector from './FeeSelector'
 import FormSubmit from './FormSubmitTx'
@@ -7,15 +6,23 @@ import GasNotification from './GasNotification'
 import TxParties from './TxParties'
 
 export default class SendTx extends Component {
-  props = {
-    gas: PropTypes.string,
-    gasPrice: PropTypes.string
-  }
+  static displayName = 'SendTx'
 
   state = {
     hasSignature: false,
     providedGas: 0,
-    fromIsContract: false
+    fromIsContract: false,
+    hasSignature: false
+  }
+
+  getGasPrice = () => {
+    // FIXME
+    return 0
+  }
+
+  estimateGasUsage = () => {
+    // FIXME
+    return 0
   }
 
   togglePriority = () => {}
