@@ -10,7 +10,6 @@ import {
   Pulse,
   Button,
   Checkbox,
-  AddressInput,
   Input,
   TextArea,
   Select,
@@ -28,12 +27,6 @@ storiesOf('Welcome', module).add('to Ethereum Components', () => (
 storiesOf('Widgets/Identicon', module)
   .add('default', () => <Identicon />)
   .add('anonymous', () => <Identicon anonymous />)
-  .add('nano (with address)', () => (
-    <Identicon
-      address="0xF5A5d5c30BfAC14bf207b6396861aA471F9A711D"
-      size="nano"
-    />
-  ))
   .add('tiny (with address)', () => (
     <Identicon
       address="0xF5A5d5c30BfAC14bf207b6396861aA471F9A711D"
@@ -76,68 +69,39 @@ storiesOf('Widgets/Animations/Icons', module)
 
 storiesOf('Widgets/Button', module)
   .add('default', () => <Button>click me</Button>)
-  .add('loading', () => <Button loading>click me</Button>)
   .add('disabled', () => <Button disabled>click me</Button>)
   .add('secondary', () => <Button secondary>click me</Button>)
-  .add('secondary loading', () => (
-    <Button secondary loading>
-      click me
-    </Button>
-  ))
   .add('secondary disabled', () => (
     <Button secondary disabled>
       click me
     </Button>
   ))
   .add('flat', () => <Button flat>click me</Button>)
-  .add('flat loading', () => (
-    <Button flat loading>
-      click me
-    </Button>
-  ))
-  .add('flat disabled', () => (
-    <Button flat disabled>
-      click me
-    </Button>
-  ))
   .add('flat secondary', () => (
     <Button flat secondary>
       click me
     </Button>
   ))
-  .add('flat secondary loading', () => (
-    <Button flat secondary loading>
-      click me
-    </Button>
-  ))
-  .add('flat secondary disabled', () => (
-    <Button flat secondary disabled>
-      click me
-    </Button>
+
+storiesOf('Widgets/Form/Input', module)
+  .add('default', () => (
+    <Input />
   ))
 
-storiesOf('Widgets/Form/Input', module).add('default', () => (
-  <Input placeholder="Sample input..." />
-))
+storiesOf('Widgets/Form/TextArea', module)
+  .add('default', () => (
+    <TextArea />
+  ))
 
-storiesOf('Widgets/Form/AddressInput', module)
-  .add('empty state', () => {
-    return <AddressInput />
-  })
-  .add('error state', () => {
-    return <AddressInput value="0x0123" />
-  })
-  .add('success state', () => {
-    return <AddressInput value="0xF5A5d5c30BfAC14bf207b6396861aA471F9A711D" />
-  })
+storiesOf('Widgets/Form/FileChooser', module)
+  .add('default', () => (
+    <FileChooser />
+  ))
 
-storiesOf('Widgets/Form/TextArea', module).add('default', () => <TextArea />)
-
-storiesOf('Widgets/Form/FileChooser', module).add('default', () => (
-  <FileChooser />
-))
-
-storiesOf('Widgets/Form/Select', module).add('default', () => <Select />)
+storiesOf('Widgets/Form/Select', module)
+  .add('default', () => (
+    <Select />
+  ))
 
 storiesOf('Widgets/Form/Checkbox', module)
   .add('unchecked', () => (
