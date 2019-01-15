@@ -1,31 +1,33 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import TxDescription from './TxDescription'
 import FeeSelector from './FeeSelector'
-import SubmitTxForm from './SubmitTxForm'
+import FormSubmit from './FormSubmitTx'
 import GasNotification from './GasNotification'
 import TxParties from './TxParties'
 
 export default class SendTx extends Component {
-  props = {
-    gas: PropTypes.string,
-    gasPrice: PropTypes.string
-  }
+  static displayName = 'SendTx'
 
   state = {
     hasSignature: false,
     providedGas: 0,
     fromIsContract: false,
-    priority: false
+    hasSignature: false
   }
 
-  togglePriority = () => {
-    const { priority } = this.state
-    this.setState({ priority: !priority })
+  getGasPrice = () => {
+    // FIXME
+    return 0
   }
+
+  estimateGasUsage = () => {
+    // FIXME
+    return 0
+  }
+
+  togglePriority = () => {}
 
   handleSubmit = formData => {
-    const { priority } = this.state
     const {
       data,
       to,
@@ -33,6 +35,7 @@ export default class SendTx extends Component {
       gas,
       gasPrice,
       estimatedGas,
+      priority,
       value
     } = this.props.newTx
 
@@ -61,10 +64,8 @@ export default class SendTx extends Component {
 
   render() {
     const { newTx, network, priority, etherPriceUSD } = this.props
+    const { from, to, value } = newTx
     const {
-      from,
-      to,
-      value,
       gasPrice,
       estimatedGas,
       gasError,
@@ -124,12 +125,15 @@ export default class SendTx extends Component {
           />
 
           <FeeSelector
+            estimatedGas={estimatedGas}
             gasLoading={gasLoading}
             gasPrice={gasPrice}
-            gas={estimatedGas}
+            getGasPrice={this.getGasPrice}
+            getGasUsage={this.estimateGasUsage}
             etherPriceUSD={etherPriceUSD}
             network={network}
-            updateGasPrice={this.updateGasPrice}
+            priority={priority}
+            togglePriority={this.togglePriority}
           />
 
           <GasNotification
@@ -140,8 +144,11 @@ export default class SendTx extends Component {
           />
 
           <div className="footer">
-            <SubmitTxForm
+            <FormSubmit
               unlocking={unlocking}
+              estimatedGas={estimatedGas}
+              gasPrice={gasPrice}
+              gasError={gasError}
               handleSubmit={this.handleSubmit}
             />
           </div>

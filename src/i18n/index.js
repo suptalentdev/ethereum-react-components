@@ -130,12 +130,10 @@ const en = {
       "transfer": "Transfer",
       "showDetails": "Show details",
       "hideDetails": "Hide details",
-      "tokenAddress": "Token Address:",
-      "tokenName": "Token Name:",
+      "tokenName": "Token name:",
       "tokenContractName": "Token Contract Address:",
       "parameters": "Parameters",
       "etherAmount": "Ether Amount:",
-      "gasPrice": "Gas Price:",
       "gasPriceStandard": "Gas Price (Standard):",
       "gasPricePriority": "Gas Price (Priority):",
       "gasEstimate": "Gas Estimate:",
@@ -157,9 +155,9 @@ const en = {
       "notEnoughGas":
         "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
       "gasLoadingWarning":
-        "Loading gas estimate...",
+        "This is taking a while! You may choose to use this default fee. Your actual fee will likely be less.",
       "gasLoadingError":
-        "Failed to estimate gas.",
+        "Failed to estimate gas. You may choose to use this default fee. Your actual fee will likely be less.",
       "errors": {
         "connectionTimeout":
           "Couldn't connect to the node, did it crash in the background?",
@@ -173,15 +171,16 @@ const en = {
     },
     "txHistory": {
       "windowTitle": "Transaction History",
-      "total": "__count__ total",
+      "total": "total",
       "status": "Status",
       "statusPending": "Pending",
       "statusFailed": "Failed",
       "statusConfirmed": "Confirmed",
-      "confirmations": "__count__ confirmations",
+      "confirmations": "confirmations",
       "txHash": "Transaction Hash",
       "etherAmount": "Ether Amount",
       "nonce": "Nonce",
+      "noTxs": "No transactions yet.",
       "gasLimit": "Gas Limit",
       "gasUsed": "Gas Used",
       "gasPrice": "Gas Price",
