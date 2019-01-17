@@ -2,46 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.9.0"></a>
-# [1.9.0](https://github.com/PhilippLgh/ethereum-react-components/compare/v1.8.1...v1.9.0) (2019-01-17)
-
-
-### Features
-
-* WalletButton component ([#93](https://github.com/PhilippLgh/ethereum-react-components/issues/93)) ([2ca7395](https://github.com/PhilippLgh/ethereum-react-components/commit/2ca7395)), closes [#82](https://github.com/PhilippLgh/ethereum-react-components/issues/82)
-
-
-
-<a name="1.8.1"></a>
-## [1.8.1](https://github.com/PhilippLgh/ethereum-react-components/compare/v1.8.0...v1.8.1) (2019-01-17)
-
-
-### Bug Fixes
-
-* add styled-components to InputPassword ([#96](https://github.com/PhilippLgh/ethereum-react-components/issues/96)) ([fe53cc7](https://github.com/PhilippLgh/ethereum-react-components/commit/fe53cc7))
-
-
-
-<a name="1.8.0"></a>
-# [1.8.0](https://github.com/PhilippLgh/ethereum-react-components/compare/v1.7.2...v1.8.0) (2019-01-15)
-
-
-### Features
-
-* AddressSelect component ([#92](https://github.com/PhilippLgh/ethereum-react-components/issues/92)) ([e978ef0](https://github.com/PhilippLgh/ethereum-react-components/commit/e978ef0)), closes [#79](https://github.com/PhilippLgh/ethereum-react-components/issues/79)
-
-
-
-<a name="1.7.2"></a>
-## [1.7.2](https://github.com/PhilippLgh/ethereum-react-components/compare/v1.7.1...v1.7.2) (2019-01-15)
-
-
-### Bug Fixes
-
-* adds prettier commit hook ([#91](https://github.com/PhilippLgh/ethereum-react-components/issues/91)) ([d7d4bb6](https://github.com/PhilippLgh/ethereum-react-components/commit/d7d4bb6))
-
-
-
 <a name="1.7.1"></a>
 ## [1.7.1](https://github.com/PhilippLgh/ethereum-react-components/compare/v1.7.0...v1.7.1) (2019-01-11)
 

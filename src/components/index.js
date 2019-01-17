@@ -7,9 +7,7 @@ import NodeInfoBox from './Network/NodeInfo/NodeInfoBox'
 import Spinner from './Widgets/AnimatedIcons/Spinner'
 import Pulse from './Widgets/AnimatedIcons/Pulse'
 import Button from './Widgets/Button'
-import WalletButton from './Widgets/WalletButton'
 import Checkbox from './Widgets/Checkbox'
-import AddressSelect from './Widgets/Form/AddressSelect'
 import RadioButton from './Widgets/Form/RadioButton'
 import Input from './Widgets/Form/Input'
 import AddressInput from './Widgets/Form/AddressInput'
@@ -20,8 +18,8 @@ import ValidatedField from './Widgets/Form/ValidatedField'
 import ConverterForm from './Tools/EthConverterForm'
 import NetworkChooser from './Network/NetworkChooser'
 import RpcTester from './Network/RPC/RpcTester'
-import FormSendTx from './Tx/SendTx'
 import TxHistory from './Tx/TxHistory'
+import SendTxForm from './Tx/SendTx'
 
 import AccountList from './Wallet/AccountList'
 import AccountItem from './Wallet/AccountItem'
@@ -36,7 +34,6 @@ export {
   AccountList,
   AccountItem,
   AddressInput,
-  AddressSelect,
   Button,
   Checkbox,
   RadioButton,
@@ -48,7 +45,6 @@ export {
   EthAddress,
   FeeSelector,
   FormCreateAccount,
-  FormSendTx,
   Identicon,
   InputPassword,
   NavbarItem,
@@ -59,10 +55,10 @@ export {
   Notification,
   Pulse,
   RpcTester,
+  SendTxForm,
   Spinner,
   TokenListForItem,
   TxHistory,
   ValidatedField,
-  WalletButton,
   utils
 }

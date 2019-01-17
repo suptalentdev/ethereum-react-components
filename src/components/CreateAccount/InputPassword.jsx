@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import i18n from '../../i18n'
 import Checkbox from '../Widgets/Checkbox'
 import ValidatedField from '../Widgets/Form/ValidatedField'
+import './InputPassword.scss'
 
 export default class InputPassword extends Component {
   static displayName = 'InputPassword'
@@ -41,30 +41,28 @@ export default class InputPassword extends Component {
     const { showPassword } = this.state
 
     return (
-      <div className={className}>
+      <div className="input-password">
         <ValidatedField
           autoFocus
           type={showPassword ? 'text' : 'password'}
           placeholder={placeholder}
+          className={className}
           value={value}
           onChange={onChange}
         />
-        <ShowPassword>
+        <div className="show-password-container">
           <Checkbox
             id="show-password-checkbox"
             name="elements_input_bool"
+            className="show-password"
             checked={showPassword}
             onChange={() => this.setState({ showPassword: !showPassword })}
             labelText={i18n.t(
               'mist.popupWindows.importAccount.buttons.showPassword'
             )}
           />
-        </ShowPassword>
+        </div>
       </div>
     )
   }
 }
-
-const ShowPassword = styled.div`
-  margin-top: 10px;
-`

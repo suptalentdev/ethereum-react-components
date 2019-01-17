@@ -1,16 +1,9 @@
-// TODO: placeholder
+import React from 'react'
 
-import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
+const Radio = ({ children, onClick }) => (
+  <input type="text" className="input-field input-radio" />
+)
 
-export default class RadioButton extends Component {
-  static displayName = 'RadioButton'
+Radio.displayName = 'RadioButton'
 
-  static propTypes = {}
-
-  static defaultProps = {}
-
-  render() {
-    return <input type="radio" {...this.props} />
-  }
-}
+export default Radio
