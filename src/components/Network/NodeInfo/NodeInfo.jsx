@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import moment from 'moment'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import i18n from '../../../i18n'
+import Pulse from '../../Widgets/AnimatedIcons/Pulse'
 import classNames from 'classnames'
 
 import NodeInfoDot from './NodeInfoDot'
