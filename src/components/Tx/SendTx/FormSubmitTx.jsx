@@ -4,7 +4,9 @@ import styled, { css } from 'styled-components'
 import { Button } from '../..'
 import i18n from '../../../i18n'
 
-export default class SubmitTxForm extends Component {
+export default class FormSubmitTx extends Component {
+  static displayName = 'FormSubmitTx'
+
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
     unlocking: PropTypes.bool,
@@ -79,28 +81,21 @@ const StyledInput = styled.input`
     color: black;
   }
 
-  :focus {
-    outline: 0;
-  }
-
   ${props =>
     props.error &&
     css`
       color: #f66d6f;
-
-      ::placeholder {
-        color: #f66d6f;
-      }
     `}
 `
 
 const UnlockingDiv = styled.div`
   display: inline-block;
-  padding: 10px;
-  margin: 20px 0;
+  padding: 6px 8px 2px;
+  margin: 48px 0;
   font-size: 1em;
   text-transform: uppercase;
   background: #827a7a;
   color: #fafafa;
+  font-family: 'Montserrat';
   font-weight: 400;
 `

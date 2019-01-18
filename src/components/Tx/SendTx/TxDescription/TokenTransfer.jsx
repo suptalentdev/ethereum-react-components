@@ -5,6 +5,8 @@ import i18n from '../../../../i18n'
 import { formatTokenCount } from '../../../../util/formatters'
 
 export default class TokenTransfer extends Component {
+  static displayName = 'TokenTransfer'
+
   static propTypes = {
     params: PropTypes.array,
     token: PropTypes.object
@@ -33,7 +35,9 @@ export default class TokenTransfer extends Component {
 }
 
 const StyledWrapper = styled.div`
+  margin: 18px 0 24px;
   font-size: 36px;
+  text-align: left;
 `
 
 const Bold = styled.span`
