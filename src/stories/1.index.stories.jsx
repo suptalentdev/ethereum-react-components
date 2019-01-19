@@ -15,8 +15,7 @@ import {
   Input,
   TextArea,
   Select,
-  FileChooser,
-  WalletButton
+  FileChooser
 } from '../components'
 import Checkmark from '../components/Widgets/AnimatedIcons/Checkmark'
 import Cross from '../components/Widgets/AnimatedIcons/AnimatedCross'
@@ -119,16 +118,6 @@ storiesOf('Widgets/Identicon', module)
 storiesOf('Widgets/Animations/Spinner', module).add('default', () => (
   <Spinner />
 ))
-
-storiesOf('Widgets/WalletButton', module)
-  .add('default', () => (
-    <WalletButton onClick={() => {}}> Add Wallet Contract </WalletButton>
-  ))
-  .add('type submit', () => (
-    <WalletButton type="submit" onClick={() => {}}>
-      Add Wallet Contract
-    </WalletButton>
-  ))
 
 storiesOf('Widgets/Animations/Pulse', module)
   .add('default', () => <Pulse />)
